@@ -737,7 +737,7 @@ class General {
 	registerUpgrades(troop) {
 		//troop.responseTime *= .8;
 		
-		if(this.levelB === 2) {
+		if(this.levelB >= 2) {
 			troop.spotStealth = true;
 		}
 		if(this.levelB === 3) {
