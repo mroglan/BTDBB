@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BTDBB Enemy Info</title>
+	<link rel="stylesheet" href="css/enemyinfo.css">
+</head>
+
+<body ondragover="return false">
+
+<header>
+	<div class="bg-image">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4 header-image-2">
+					<img alt="Red Barb" src="media/redBarb.png">
+					<img alt="Skeleton" src="media/skeleton.png" class="up-margin">
+				</div>
+				<div class="col-1-2 header-image">
+					<div id="archerFront"><img alt="Archer waving" src="media/archerHead.png"></div>
+					<div class="header-primary">
+						<h1>BTDBB</h1>
+					</div>
+				</div>
+				<div class="col-1-4 header-image-2">
+					<img alt="General" src="media/general.png">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">	
+				<nav>
+					<div class="btn nav">
+						<ul>
+							<li class="btn btn-nav"><a href="https://mroglan.github.io/game/generalinfo.html">General Info</a></li>
+							<li class="btn btn-nav"><a href="https://mroglan.github.io/game/troopinfo.html">Troop Info</a></li>
+							<li class="btn btn-nav"><a href="https://mroglan.github.io/game/enemyinfo.html">Enemy Info</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<img alt="Header background" src="media/backgroundMap.png">
+	</div>
+</header>
+
+<main>
+	
+	<section>
+		<div class="background-quartary selection-title">
+			<h1>Enemy Information</h1>
+		</div>
+	</section>
+	
+	<section class="background-tertiary">
+		<div class="container">
+			<div class="row">
+				<div class="col-3-4 flexbox-rw">
+					<picture class="enemyImage" ondragstart="dragHandler(event, 0)"><img alt="Easy Barb" src="media/barb1.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 1)"><img alt="Barb 2" src="media/barb2.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 2)"><img alt="Barb 3" src="media/barb3.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 3)"><img alt="Barb 4" src="media/barb4.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 4)"><img alt="Barb 5" src="media/barb5.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 5)"><img alt="Barb 6" src="media/barb6.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 6)"><img alt="Barb 7" src="media/fastBarb.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 7)"><img alt="Barb 8" src="media/barb8.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 8)"><img alt="Barb 9" src="media/skeleton.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 9)"><img alt="Barb 10" src="media/redBarb.png"></picture>
+					<picture class="enemyImage" ondragstart="dragHandler(event, 10)"><img alt="Barb 11" src="media/barb11.png"></picture>
+				</div>
+				<div class="col-1-4">
+					<div id="dropDiv">
+					</div>
+					<div class="dropInfo">
+						<p>Drag an enemy into the box to see its stats!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="background-quintary">
+		<div class="container">
+			<div class="enemy-table">
+				<table class="table-border">
+					<caption class="section-title enemy-stat-title">
+						<p></p>
+					</caption>
+					
+					<thead>
+						<tr><th>Attack Type</th><th>Health</th><th>Speed</th><th>Troop Spawned on Death</th></tr>
+					</thead>
+					
+					<tbody>
+						<tr><td class="enemy-attack"></td><td class="enemy-health"></td><td class="enemy-speed"></td><td class="enemy-spawn"></td></tr>
+					</tbody>
+				</table>
+				<div class="note"><p><span class="embolden">*</span>speed decreases as enemy moves through track</p></div>
+				<div class="note note-2"><p><span class="embolden">Note: </span> A skeleton will not take your lives, but your money!</p></div>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="background-sextary">
+	<div class="container">
+		<div class="row">
+			<div class="col-1-3">
+				BOB Inc.
+			</div>
+			<div class="col-1-3">
+				bobhascome@gmail.com
+			</div>
+			<div class="col-1-3">
+				Copyright 2020. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+
+<script src="JavaScript/enemyinfo.js"></script>
+
+</html>
