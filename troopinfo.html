@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BTDBB Troop Info</title>
+	<link rel="stylesheet" href="css/troopinfo.css">
+</head>
+
+<body ondragover="return false">
+
+<header>
+	<div class="bg-image">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4 header-image-2">
+					<img alt="Red Barb" src="media/redBarb.png">
+					<img alt="Skeleton" src="media/skeleton.png" class="up-margin">
+				</div>
+				<div class="col-1-2 header-image">
+					<div id="archerFront"><img alt="Archer waving" src="media/archerHead.png"></div>
+					<div class="header-primary">
+						<h1>BTDBB</h1>
+					</div>
+				</div>
+				<div class="col-1-4 header-image-2">
+					<img alt="General" src="media/general.png">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">	
+				<nav>
+					<div class="btn nav">
+						<ul>
+							<li class="btn btn-nav"><a href="https://mroglan.github.io/game/generalinfo.html">General Info</a></li>
+							<li class="btn btn-nav"><a href="https://mroglan.github.io/game/troopinfo.html">Troop Info</a></li>
+							<li class="btn btn-nav"><a href="https://mroglan.github.io/game/enemyinfo.html">Enemy Info</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<img alt="Header background" src="media/backgroundMap.png">
+	</div>
+</header>
+
+<main>
+
+	<section>
+		<div class="background-quartary selection-title">
+			<h1>Troop Information</h1>
+		</div>
+	</section>
+	
+	<section class="background-tertiary">
+		<div class="container">
+			<div class="row">
+				<div class="col-3-4 flexbox-rw">
+					<picture class="troopImage" ondragstart="dragHandler(event, 0)"><img alt="Soldier" src="media/romanHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 1)"><img alt="Archer" src="media/archerHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 2)"><img alt="Cavalry" src="media/calvaryHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 3)"><img alt="Cannon" src="media/cannon.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 4)"><img alt="Ship" src="media/ship.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 5)"><img alt="Sharpshooter" src="media/sniperHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 6)"><img alt="General" src="media/generalHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 7)"><img alt="Medic" src="media/medicHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 8)"><img alt="Rifleman" src="media/riflemanHead.png"></picture>
+					<picture class="troopImage" ondragstart="dragHandler(event, 9)"><img alt="Wizard" src="media/wizardHead.png"></picture>
+				</div>
+				<div class="col-1-4">
+					<div id="dropDiv">
+					</div>
+					<div class="dropInfo">
+						<p>Drag a troop into the box to see its stats!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="background-quintary">
+		<div class="container">
+			<div class="troop-table" id="soldier-table">
+				<table class="table-border">
+					<caption class="section-title base-stat-title">
+						<p>Soldier Base Stats</p>
+					</caption>
+					
+					<colgroup>
+						<col><col><col><col><col><col>
+					</colgroup>
+				
+					<thead>
+						<tr><th>Attack Type</th><th >Range</th><th>Health</th>
+						<th>Damage</th><th>Attacks per Second</th><th>Stealth Detection</th></tr>
+					</thead>
+					
+					<tbody>
+						<tr><td class="base-melee">Melee</td><td class="base-range">5</td><td class="base-health">200</td>
+						<td class="base-damage">1</td><td class="base-speed">0.5</td><td class="base-stealth">No</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+	
+	<section class="background-septary">
+		<div class="container">
+			<div class="upgrade-table" id="up-table">
+				<table class="table-border">
+					<caption class="section-title upgrade-stat-title">
+						<p>Soldier Upgrades</p>
+					</caption>
+					
+					<thead>
+						<tr><th></th><th>Level 2</th><th>Level 3</th><th>Level 4</th><th>Level 5</th></tr>
+					</thead>
+					
+					<tbody>
+						<tr><th>Upgrade Path A</th><td class="u-2-a"></td><td class="u-3-a"></td><td class="u-4-a"></td><td class="u-5-a"></td></tr>
+						<tr><th>Upgrade Path B</th><td class="u-2-b"></td><td class="u-3-b"></td><td class="u-4-b"></td><td class="u-5-b"></td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="note">
+			<p><span class="embolden">Note: </span>Once a troop has reached level 4 on an upgrade path, it will not be able to reach level 4 on the other path.</p>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="background-sextary">
+	<div class="container">
+		<div class="row">
+			<div class="col-1-3">
+				BOB Inc.
+			</div>
+			<div class="col-1-3">
+				bobhascome@gmail.com
+			</div>
+			<div class="col-1-3">
+				Copyright 2020. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+
+<script src="JavaScript/troopinfo.js"></script>
+
+</html>
