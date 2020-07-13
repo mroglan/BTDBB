@@ -40,6 +40,8 @@ let arrowImage, arrowArray = [], cannonballImage, explosionImage, explosionArray
 let fastForward = false;
 let sound1;
 
+//hello world
+
 class SideFireball {
 	
 	constructor(troop, x, y, angle, speed, damage) {
