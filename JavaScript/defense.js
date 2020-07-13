@@ -208,9 +208,9 @@ class Wizard {
 		this.radius = radius;
 		this.health = 200;
 		this.maxHealth = 200;
-		this.damage = 5;
-		this.responseTime = 50;
-		this.responseCount = 50;
+		this.damage = 4;
+		this.responseTime = 100;
+		this.responseCount = 100;
 		this.spriteCount = 0;
 		this.levelA = 1;
 		this.itemACost = 0;
@@ -339,7 +339,7 @@ class Wizard {
 			this.damage += 3;
 		}
 		else if(level === 4) {
-			this.responseTime = 0;
+			this.responseTime = 30;
 		}
 		else if(level === 5) {
 			this.tripleShot = true;
@@ -438,7 +438,7 @@ class Rifleman {
 		this.radius = radius;
 		this.health = 150;
 		this.maxHealth = 150;
-		this.damage = 2;
+		this.damage = 3;
 		this.responseTime = 50;
 		this.responseCount = 50;
 		this.spriteCount = 0;
@@ -554,13 +554,13 @@ class Rifleman {
 	
 	registerUpgradeB(level) {
 		if(level === 2) {
-			this.damage += 2;
+			this.damage += 3;
 		}
 		else if(level === 3) {
 			this.pierce = true;
 		}
 		else if(level === 4) {
-			this.damage += 2;
+			this.damage += 3;
 		}
 		else if(level === 5) {
 			this.slowDownEnemy = true;
@@ -787,7 +787,7 @@ class General {
 			if(troop.type === 'romanSoldier' && Math.sqrt(Math.pow(troop.x + troop.width/2 - this.x - this.width/2, 2) + Math.pow(troop.y + troop.height/2 - this.y - this.height/2, 2)) < this.radius) {
 				troop.radius = .05 * w * 1.3 * 1.3;
 				troop.spotStealth = true;
-				troop.responseTime = 30;
+				troop.responseTime = 10;
 				troop.damage = 5;
 				troop.levelA = 5;
 				troop.levelB = 5;
@@ -1013,7 +1013,7 @@ class Sniper {
 			this.responseTime -= 75;
 		}
 		else if(level === 3) {
-			this.responseTime -= 50;
+			this.responseTime -= 70;
 		}
 		else if(level === 4) {
 			this.damage = 8;
@@ -1037,7 +1037,7 @@ class Ship {
 		this.radius = radius;
 		this.health = 400;
 		this.maxHealth = 400;
-		this.damage = 1;
+		this.damage = 2;
 		this.responseTime = 100;
 		this.levelA = 1;
 		this.itemACost = 0;
@@ -1162,7 +1162,7 @@ class Ship {
 		}
 		else if(level === 4) {
 			this.shotType = 'cannonball';
-			this.damage = 2;
+			this.damage = 4;
 		}
 		else if(level === 5) {
 			this.damageRadius *= 2.5;
@@ -1317,7 +1317,7 @@ class Cannon {
 		this.health = 250;
 		this.maxHealth = 250;
 		this.damage = 2;
-		this.responseTime = 200;
+		this.responseTime = 170;
 		this.levelA = 1;
 		this.itemACost = 0;
 		this.canAffordA = true;
@@ -1325,7 +1325,7 @@ class Cannon {
 		this.itemBCost = 0;
 		this.canAffordB = true;
 		this.angle = 0;
-		this.responseCount = 200;
+		this.responseCount = 170;
 		this.strikes = 0;
 		this.spotStealth = false;
 		this.target = -1;
@@ -1466,11 +1466,11 @@ class Calvary {
 		this.width = width;
 		this.height = height;
 		this.radius = radius;
-		this.health = 300;
-		this.maxHealth = 300;
+		this.health = 200;
+		this.maxHealth = 200;
 		this.damage = 2;
 		this.spriteCount = 0;
-		this.responseTime = 150;
+		this.responseTime = 140;
 		this.levelA = 1;
 		this.itemACost = 0;
 		this.canAffordA = true;
@@ -1478,7 +1478,7 @@ class Calvary {
 		this.itemBCost = 0;
 		this.canAffordB = true;
 		this.angle = 0;
-		this.responseCount = 150;
+		this.responseCount = 140;
 		this.strikes = 0;
 		this.spotStealth = false;
 		this.target = -1;
@@ -1611,7 +1611,7 @@ class Calvary {
 			this.damage += 2;
 		}
 		else if(level === 4) {
-			this.responseTime -= 50;
+			this.responseTime -= 70;
 		}
 		else if(level === 5) {
 			this.responseTime -= 50;
@@ -1833,7 +1833,7 @@ class Archer {
 		this.maxHealth = 50;
 		this.damage = 1;
 		this.spriteCount = 0;
-		this.responseTime = 150;
+		this.responseTime = 120;
 		this.levelA = 1;
 		this.itemACost = 0;
 		this.canAffordA = true;
@@ -1841,7 +1841,7 @@ class Archer {
 		this.itemBCost = 0;
 		this.canAffordB = true;
 		this.angle = 0;
-		this.responseCount = 150;
+		this.responseCount = 120;
 		this.strikes = 0;
 		this.spotStealth = false;
 		this.target = -1;
@@ -1964,7 +1964,7 @@ class Archer {
 			this.damage += 2;
 		}
 		else if(level === 5) {
-			this.responseTime -= 70;
+			this.responseTime -= 50;
 		}
 	}
 }
@@ -1980,11 +1980,11 @@ class RomanSoldier {
 		this.width = width;
 		this.height = height;
 		this.radius = radius;
-		this.health = 200;
-		this.maxHealth = 200;
+		this.health = 230;
+		this.maxHealth = 230;
 		this.damage = 1;
 		this.spriteCount = 0;
-		this.responseTime = 120;
+		this.responseTime = 100;
 		this.levelA = 1;
 		this.itemACost = 0;
 		this.canAffordA = true;
@@ -1992,7 +1992,7 @@ class RomanSoldier {
 		this.itemBCost = 0;
 		this.canAffordB = true;
 		this.angle = 0;
-		this.responseCount = 120;
+		this.responseCount = 100;
 		this.strikes = 0;
 		this.spotStealth = false;
 		this.target = -1;
@@ -2102,7 +2102,7 @@ class RomanSoldier {
 			this.damage = 2;
 		}
 		else if(level === 4) {
-			this.responseTime -= 60;
+			this.responseTime -= 40;
 		}
 		else if(level === 5) {
 			this.damage = 5;
@@ -3719,13 +3719,13 @@ function checkForSpawn() {
 			if(enemySpawnCounter === enemy.time) {
 				let opponent;
 				if(enemy.type === 1) {
-					opponent = new Enemy('easy', (.05 * w) - w/60, 1.05 * h, 1, .41675, 0, 0, 1, w/30, w/30, enemy.stealth);
+					opponent = new Enemy('easy', (.05 * w) - w/60, 1.05 * h, 1, .625125, 0, 0, 1, w/30, w/30, enemy.stealth);
 				}
 				else if(enemy.type === 2) {
-					opponent = new Enemy('medium',  (.05 * w) - w/60, 1.05 * h, 5, .3, 0, 0, 1, w/30, w/30, enemy.stealth);
+					opponent = new Enemy('medium',  (.05 * w) - w/60, 1.05 * h, 5, .45, 0, 0, 1, w/30, w/30, enemy.stealth);
 				}
 				else if(enemy.type === 3) {
-					opponent = new Enemy('redBarb', (.05 * w) - w/60, 1.05 * h, 3, .41675, 0, 0, 1, w/30, w/30, enemy.stealth);
+					opponent = new Enemy('redBarb', (.05 * w) - w/60, 1.05 * h, 3, .625125, 0, 0, 1, w/30, w/30, enemy.stealth);
 				}
 				else if(enemy.type === 4) {
 					opponent = new Enemy('blueBarb', (.05 * w) - w/60, 1.05 * h, 4, .625125, 0, 0, 1, w/30, w/30, enemy.stealth);
