@@ -2968,7 +2968,7 @@ function loadEvents() {
 	
 	event12 = function() {
 		if(mousePos.x > .75 * w && mousePos.x < .8 * w && mousePos.y < .05 * w) {
-			window.open('https://mroglan.github.io/game/generalinfo.html');
+			window.open('https://mroglan.github.io/BTDBB/generalinfo.html');
 		}
 	}
 }
